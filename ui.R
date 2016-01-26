@@ -13,7 +13,7 @@ shinyUI(fluidPage(
              #   		tabPanel("Table")
              #   	)
   ),
-  titlePanel("Kaggle's Titanic Sinking Excercise"),
+  titlePanel("Kaggle's Titanic Sinking Exercise"),
   sidebarLayout(
     sidebarPanel(
       
