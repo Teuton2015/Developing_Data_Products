@@ -9,11 +9,11 @@ dataset <- trainData
 shinyUI(fluidPage(
   navbarPage("Johns Hopkins University on Coursera - Data Science Specialization - Developing Data Products"
              # navbarMenu("Links ",
-             #   		tabPanel$a(href = "https://www.kaggle.com/c/titanic-gettingStarted", "Kaggle's Titanic Challenge"),
+             #   		tabPanel$a(href = "https://www.kaggle.com/c/titanic-gettingStarted", "Kaggle's Titanic Sinking"),
              #   		tabPanel("Table")
              #   	)
   ),
-  titlePanel("Kaggle's Titanic Challenge"),
+  titlePanel("Kaggle's Titanic Sinking Excercise"),
   sidebarLayout(
     sidebarPanel(
       
@@ -71,7 +71,7 @@ shinyUI(fluidPage(
     
     mainPanel(
       h2('Exploratory Analysis'),
-      p("This rudimentary Application intends to provide a basic exploratory analysis of the training dataset of Kaggle's Titanic Challenge."),
+      p("This rudimentary Application intends to provide a basic exploratory analysis of the training dataset of Kaggle's Titanic Sinking."),
       p("It only uses the training dataset of Kaggle's Titanic challenge, which one can download from this application, or from Kaggle's web page:"),
       a("https://www.kaggle.com/c/titanic-gettingStarted"),
       #img(src ="./figures/titanic.png", height = 200, width = 200),
