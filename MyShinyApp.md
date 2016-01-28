@@ -2,17 +2,18 @@ RMS Titanic Sinking Exercise: Shiny Web Application Pitch Presentation
 ========================================================
 author: Teuton2015
 font-family: 'Helvetica'
-date: Wed Jan 27 17:56:21 2016
+date: Thu Jan 28 14:54:01 2016
+autosize: true
+transition: concave
 
 RMS Titanic Sinking: Pitch Presentation Content
 ========================================================
+![alt text](TitanicSinkingFigure.png)
+<small>Image source: <https://kaggle2.blob.core.windows.net/competitions/kaggle/3136/logos/front_page.png></small>
 
 1. Purpose and Information
 2. Embedded R Code  
 3. Instructions for Reproducing Locally
-
-![alt text](TitanicSinkingFigure.png)
-<small>Image source: <https://kaggle2.blob.core.windows.net/competitions/kaggle/3136/logos/front_page.png></small>
 
 1. Purpose and Information
 ===
@@ -25,23 +26,23 @@ The dataset, found on Kaggle.com, <https://www.kaggle.com/c/titanic/data>, conta
 
 2. Embedded R Code
 ========================================================
-
+<small>library(ggplot2) was used for the plotting. Here is the code for a static view of the default plot that is rendered on the web app:</small>
 
 ```r
-summary(cars)
+library(ggplot2)
+trainData <- read.csv("train.csv")
+g <- ggplot(trainData, aes(Age, Pclass))
+g + geom_point(aes(color=Sex)) + facet_grid(Survived ~.)
 ```
 
-```
-     speed           dist       
- Min.   : 4.0   Min.   :  2.00  
- 1st Qu.:12.0   1st Qu.: 26.00  
- Median :15.0   Median : 36.00  
- Mean   :15.4   Mean   : 42.98  
- 3rd Qu.:19.0   3rd Qu.: 56.00  
- Max.   :25.0   Max.   :120.00  
-```
+![plot of chunk unnamed-chunk-1](MyShinyApp-figure/unnamed-chunk-1-1.png)
 
 3. Instructions for Reproducing Locally
 ========================================================
+For reproducing this project locally on your computer, you would need to follow these steps:
 
-![plot of chunk unnamed-chunk-2](MyShinyApp-figure/unnamed-chunk-2-1.png)
+1. Install the necessary packages to run RStudio’s Shiny server locally, as instructed here: <http://shiny.rstudio.com/articles/shinyapps.html>
+
+2. Run the following command in RStudio:
+
+> runGitHub(“MyShinyApp”, “Teuton2015”)

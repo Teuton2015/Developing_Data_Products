@@ -3,16 +3,17 @@ RMS Titanic Sinking Exercise: Shiny Web Application Pitch Presentation
 author: Teuton2015
 font-family: 'Helvetica'
 date: `r date()`
+autosize: true
+transition: concave
 
 RMS Titanic Sinking: Pitch Presentation Content
 ========================================================
+![alt text](TitanicSinkingFigure.png)
+<small>Image source: <https://kaggle2.blob.core.windows.net/competitions/kaggle/3136/logos/front_page.png></small>
 
 1. Purpose and Information
 2. Embedded R Code  
 3. Instructions for Reproducing Locally
-
-![alt text](TitanicSinkingFigure.png)
-<small>Image source: <https://kaggle2.blob.core.windows.net/competitions/kaggle/3136/logos/front_page.png></small>
 
 1. Purpose and Information
 ===
@@ -25,14 +26,20 @@ The dataset, found on Kaggle.com, <https://www.kaggle.com/c/titanic/data>, conta
 
 2. Embedded R Code
 ========================================================
-
+<small>library(ggplot2) was used for the plotting. Here is the code for a static view of the default plot that is rendered on the web app:</small>
 ```{r}
-summary(cars)
+library(ggplot2)
+trainData <- read.csv("train.csv")
+g <- ggplot(trainData, aes(Age, Pclass))
+g + geom_point(aes(color=Sex)) + facet_grid(Survived ~.)
 ```
 
 3. Instructions for Reproducing Locally
 ========================================================
+For reproducing this project locally on your computer, you would need to follow these steps:
 
-```{r, echo=FALSE}
-plot(cars)
-```
+1. Install the necessary packages to run RStudio’s Shiny server locally, as instructed here: <http://shiny.rstudio.com/articles/shinyapps.html>
+
+2. Run the following command in RStudio:
+
+> runGitHub(“MyShinyApp”, “Teuton2015”)
