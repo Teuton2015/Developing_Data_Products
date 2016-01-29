@@ -1,8 +1,8 @@
 name: MyShinyApp
 account: teuton2015
 server: shinyapps.io
-bundleId: 361095
+bundleId: 361102
 url: https://teuton2015.shinyapps.io/MyShinyApp/
-when: 1454036173.66078
+when: 1454038043.04878
 asMultiple: FALSE
 asStatic: FALSE

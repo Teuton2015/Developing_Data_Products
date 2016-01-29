@@ -73,7 +73,7 @@ shinyUI(fluidPage(
       h2('Exploratory Analysis'),
       p("This rudimentary Application intends to provide a basic exploratory analysis of the training dataset of Kaggle's Titanic Sinking."),
       p("It only uses the training dataset of Kaggle's Titanic exercise, which one can download from this application, or from Kaggle's web page:"),
-      a("https://www.kaggle.com/c/titanic-gettingStarted"),
+      a('https://www.kaggle.com/c/titanic-gettingStarted'),
       #img(src ="./figures/titanic.png", height = 200, width = 200),
       p("It is based on Trevor Stephens's R tutorial, which provides a useful introduction to R:"),
       a('http://trevorstephens.com/post/72916401642/titanic-getting-started-with-r'),
